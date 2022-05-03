@@ -1,0 +1,35 @@
+// Specific CSS for your home-page
+body {
+  font-family: Helvetica;
+  background-color: rgb(230, 230, 230);
+  p{
+    color: rgb(58, 28, 33);
+  }
+}
+
+$gray: #F4F4F4;
+$spacer: 8px;
+
+body {
+  background: $gray; // Using this variable
+}
+
+.btn {
+  padding: $spacer ($spacer * 3);
+}
+
+.banner {
+  background: red;
+
+  h1 {
+    font-size: 50px;
+  }
+}
+
+a {
+  color: grey;
+
+  &:hover {
+    color: black;
+  }
+}
