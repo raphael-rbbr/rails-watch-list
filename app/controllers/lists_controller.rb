@@ -6,6 +6,11 @@ class ListsController < ApplicationController
 
   def show
     @bookmark = Bookmark.new
+    @list = List.find(params[:id])
+  end
+
+  def new
+    @list = List.new
   end
 
   def create
@@ -18,6 +23,7 @@ class ListsController < ApplicationController
   end
 
   def destroy
+    set_list
     @list.destroy
     redirect_to lists_path
   end
@@ -29,6 +35,6 @@ class ListsController < ApplicationController
   end
 
   def list_params
-    params.require(:list).permit(:name)
+    params.require(:list).permit(:name, :id)
   end
 end
